@@ -54,6 +54,7 @@ footer {
     bottom: 0;
 }
 
+/* 줄어들면 메뉴들 가운데 세로로 정렬 */
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column;
@@ -63,4 +64,11 @@ footer {
     form input, form textarea {
         width: 100%;
     }
+}
+
+/* ------------------ */
+.content {
+    background-color: rgb(255, 230, 0);
+    width: 150%;
+    height: 100vh;
 }
