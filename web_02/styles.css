@@ -80,3 +80,26 @@ footer {
 
     }
 }
+
+/* -- */
+.img_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+        flex: 1;
+        border: 2px solid #bbb;
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        img {
+            margin: 10px;
+            margin-bottom: 50px;
+            border: 2px solid #bbb;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
