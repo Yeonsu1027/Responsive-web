@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -23,26 +22,58 @@ nav ul li {
     border-bottom: 2px solid #333;
     padding: 10px;
     transition: border-color 0.3s ease;
-    &:hover {
-        cursor: pointer;
-        border-bottom: 2px  solid rgba(255, 215, 35);
-    }
+}
+
+nav ul li:hover {
+    cursor: pointer;
+    border-bottom: 2px solid rgba(255, 215, 35);
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+
 /* 클릭한거 체크 유지 */
 .click {
-    border-bottom: 2px  solid rgba(255, 215, 35);
+    border-bottom: 2px solid rgba(255, 215, 35);
 }
+
+
+/* 타이틀 문구 웰컴투~~ */
+.title {
+    text-align: center;
+    margin: 5vw;
+    h1{
+    text-align: left;
+      font-size: 5rem;
+      line-height:1;
+      text-transform: uppercase;
+      /* -webkit-text-stroke: 1px #000; */
+      -webkit-text-fill-color: white;
+      /* -webkit-font-smoothing: subpixel-antialiased; */
+    }
+  }
+
+
 /* 처음 배경사진 -----------------------------------------  */
+.background {
+    margin-top: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('./images/img06.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1; 
+}
 
 /* -------------------------------------------- */
 
 main {
     padding: 2em;
+    margin-top: 100vh; 
 }
 
 section {
@@ -65,7 +96,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em 0;
-    /* position: fixed; */
     width: 100%;
     bottom: 0;
 }
@@ -82,6 +112,15 @@ footer {
     }
 }
 
+.introduce {
+    padding: 50px;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 200px;
+}
+
+/* --------- */
+
 .content {
     background-color: rgb(255, 215, 35);
     min-height: 50vh; 
@@ -91,10 +130,10 @@ footer {
     padding: 2em; /* 내용의 패딩을 추가 */
     margin-bottom: 100px;
 }
+
 /* 화면줄었을때 문구용 : 안보이게 */
 .typing2 {
     display: none;
-
     font-size: 7rem;
     font-weight: bold;
     margin: -5px;
@@ -102,13 +141,10 @@ footer {
     overflow: hidden;
     border-right: 1px solid black;
     animation: typing 5s steps(31) infinite, blink 0.75s step-end infinite;
-
     text-align: left;
 }
+
 /* 움직임효과 */
-
-  
-
 
 /* 1250 이하로 줄어들면 그림, 문구 세로로  */
 @media (max-width: 1250px) {
@@ -136,10 +172,6 @@ footer {
     }
 
     .typing {
-        /* font-size: 4rem; 
-        white-space: normal;  */
-
-        /* 원래 문구 가리고 */
         display: none;
     }
 
@@ -147,10 +179,6 @@ footer {
         display: block;
     }
 }
-
-
-
-
 
 .cat01 {
     display: flex;
@@ -195,7 +223,68 @@ footer {
         border-color: black;
     }
 }
+/* ---------- 화면스크롤움직이는거- */
+.content2{
+    margin-top: 150px;
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 50px;
+        text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
+    }
+}
 
+.scroll_img {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .image1 {
+      background: url(./images/img07.jpg) no-repeat;
+    background-attachment: fixed;
+    /* 사진화면꽉채우게 */
+    background-size: cover; 
+  }
+  
+  .image2 {
+      background: url(./images/img08.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  .image3 {
+      background: url(./images/img09.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+ 
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: #fff;
+    background: #333 ;
+    font-size: 1.1rem;
+  }
+  .color2 {
+    background-color:  rgba(255, 215, 35);
+    color: #333;
+  }
+  
+  /*  jsDelivr CDN import */
+  @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+  
+  * {
+    font-family: Pretendard;
+    padding: 0;
+    margin: 0;
+  }
+
+/* ------------- */
+
+/* 사진3개 */
 .img_box {
     display: flex;
     align-items: center;
@@ -286,10 +375,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* text-align: left; */
-    background: linear-gradient(90deg, #a4f5b3, #faf082);
-
-
     form {
         width: 80%;
         margin-bottom: 30px;
@@ -306,13 +391,10 @@ button.btn {
     padding: 8px;
     background-color: #333;
     color: white;
-    transition: color 1s, width 0.5s, ease-in-out, all 2s; /
-  }
-  button.btn.hover5:hover {
-    /* 위에서, 아래에서.. */
-    cursor: pointer;
-    /* background-color: rgb(255, 215, 35); */
-    box-shadow: 0 50px 0 0 yellowgreen inset, 0 -50px 0 0 green inset;
-  }
+    transition: color 1s, width 0.5s, ease-in-out, all 2s;
+}
 
-  
+button.btn.hover5:hover {
+    cursor: pointer;
+    box-shadow: 0 50px 0 0 yellowgreen inset, 0 -50px 0 0 yellowgreen inset;
+}

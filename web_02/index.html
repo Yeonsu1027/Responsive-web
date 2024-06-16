@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Website</title>
+    <title>Responsive Website 반응형웹만들기</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Animate.css 라이브러리 스타일 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <header>
@@ -17,23 +19,29 @@
             </ul>
         </nav>
     </header>
-    <img class="background" src="./images/img06.jpg" alt="">
+    <div class="title">
+        <h1 class="animate__fadeInUp animate__animated">welcome to</h1>
+        <h1 class="animate__fadeInUp animate__animated">lovely pets</h1>    
+    </div>
+    <div class="background"></div>
     <main>
-        <section id="home">
-            <h1>Welcome to Our Site</h1>
-            <p>High-quality pet products for your beloved pets.</p>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We provide the best products for your pets.</p>
-        </section>
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>Explore our range of premium pet products.</p>
-        </section>
+        <div class="introduce">
+            <section id="home" class="home">
+                <h1>Welcome to Our Site</h1>
+                <p>Add a pet to your life!!</p>
+            </section>
+            <section id="about" class="about">
+                <h2>About Us</h2>
+                <p>We can help you raise animals</p>
+            </section>
+            <section id="services" class="services">
+                <h2>Our Services</h2>
+                <p>About animal adoption</p>
+        </div>
+            </section>
         <section class="content">
             <div class="cat01">
-                <img src="./images/cat1.png" alt="" >
+                <img src="./images/cat1.png" alt="">
                 <div class="ty">
                     <p class="typing">
                         Raise a pet!
@@ -49,6 +57,24 @@
             <div class="img_box2"><img src="./images/img03.jpg" alt="" width="200px"></div>
             <div class="img_box2"><img src="./images/img01.jpg" alt="" width="200px"></div>
         </div>
+        <section class="content2">
+            <h1>Change your life!</h1>
+            <div class="image1 scroll_img"></div>
+            <div class="text scroll_img">
+            <h2>
+                With your pet! <br><br>
+                Make your life more lively and energetic! <br>
+            </h2>
+            </div>
+            <div class="image2 scroll_img"></div>
+            <div class="text color2 scroll_img">
+            <h1>
+                Now in lovely pets<br>
+                Meet your pet!
+            </h1>
+            </div>
+            <div class="image3 scroll_img"></div>
+        </section>
         <section class="contact">
             <h2>Contact Us</h2>
             <form>
