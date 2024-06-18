@@ -8,13 +8,20 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding: 1em 0;
+    padding: 0.5em 0;
+    /* position: fixed; */
+    position: fixed;
+    margin-top: -200px;
+    width: 100%;
+    z-index: 9998;
 }
+
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    background-attachment: fixed;
 }
 
 nav ul li {
@@ -44,6 +51,7 @@ nav ul li a {
 .title {
     text-align: center;
     margin: 5vw;
+    margin-top: 200px;
     h1{
     text-align: left;
       font-size: 5rem;
@@ -60,6 +68,8 @@ nav ul li a {
 .background {
     margin-top: 50px;
     position: absolute;
+    /* background-attachment: fixed;
+    background-size: cover; */
     top: 0;
     left: 0;
     width: 100%;
@@ -73,7 +83,7 @@ nav ul li a {
 
 main {
     padding: 2em;
-    margin-top: 100vh; 
+    margin-top: 80vh; 
 }
 
 section {
@@ -127,7 +137,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2em; /* 내용의 패딩을 추가 */
+    padding: 2em; 
     margin-bottom: 100px;
 }
 
@@ -267,6 +277,9 @@ footer {
     color: #fff;
     background: #333 ;
     font-size: 1.1rem;
+    h1 {
+        margin-left: 15px;
+    }
   }
   .color2 {
     background-color:  rgba(255, 215, 35);
@@ -324,7 +337,7 @@ footer {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 9999; 
     padding-top: 100px;
     left: 0;
     top: 0;
@@ -349,6 +362,7 @@ footer {
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    z-index: 10000; 
 }
 
 .close:hover,
@@ -375,10 +389,63 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #ddd;
+    /* border-radius: 15px; */
     form {
         width: 80%;
         margin-bottom: 30px;
+        display: flex;
     }
+    h2 {
+        font-size: 2rem;
+        padding: 10px;
+    }
+}
+.contact_box {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    input, textarea {
+        border-radius: 15px;
+        border: 1px solid #aaa;
+    }
+    .ne {
+        display: flex;
+        
+        width: 90%;
+        /* border: 1px solid blue; */
+        /* margin: auto 10px; */
+        margin: auto;
+        /* align-items: center; */
+        justify-content: center;
+        input {
+            /* border: 1px solid red; */
+            /* flex: 1; */
+            width: 85%;
+            margin: 15px;
+            /* margin-left: auto;
+            margin-right: auto; */
+        }
+    }
+    textarea {
+        margin: auto;
+        width: 90%;
+        height: 120px;
+    }
+
+}
+@media (max-width: 820px) {
+.ne {
+    flex-direction: column;
+    /* border: 2px solid red; */
+    input {
+        /* width: 300px; */
+        /* border: 1px solid blue; */
+        width: 100%;
+        margin: 2px;
+        margin-right: 50px;
+    }
+}
 }
 
 /* send 버튼 */
